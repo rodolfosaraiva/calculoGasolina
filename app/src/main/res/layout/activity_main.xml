@@ -5,34 +5,57 @@
     android:orientation="vertical"
     android:padding="50px">
 
-    <EditText
-        android:id="@+id/texto1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:ems="10"
-        android:hint="Valor da gasolina"
-        android:inputType="number" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/texto2"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:ems="10"
-        android:hint="Valor do alcool"
-        android:inputType="number" />
+        <EditText
+            android:id="@+id/texto1"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:hint="Valor da gasolina"
+            android:inputType="number" />
 
-    <Button
-        android:id="@+id/botao"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="Calcular Combustível" />
+        <EditText
+            android:id="@+id/texto2"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:hint="Valor do alcool"
+            android:inputType="number" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/resultado"
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="63dp"
-        android:paddingLeft="30px"
-        android:paddingTop="30px"
-        android:paddingRight="30px"
-        android:text="" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/botao"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Calcular Combustível" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/resultado"
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30px"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:text="" />
+
+    </LinearLayout>
+
 </LinearLayout>

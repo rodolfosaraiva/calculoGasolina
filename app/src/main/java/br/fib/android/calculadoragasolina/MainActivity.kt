@@ -21,10 +21,9 @@ class MainActivity : AppCompatActivity() {
         texto1.addTextChangedListener(MoneyTextWatcher(texto1));
         texto2.addTextChangedListener(MoneyTextWatcher(texto2));
 
-
         botao.setOnClickListener {
-            var valorGasolina = texto1.text.toString()
-            var valorAlcool = texto2.text.toString()
+            var valorGasolina = texto1.text.toString();
+            var valorAlcool = texto2.text.toString();
 
             if (valorGasolina == "") {
                 Toast.makeText(this, "Favor preencher o valor da gasolina", Toast.LENGTH_LONG).show()
@@ -33,6 +32,9 @@ class MainActivity : AppCompatActivity() {
             if (valorAlcool == ""){
                 Toast.makeText(this, "Favor preencher o valor da alcool", Toast.LENGTH_LONG).show()
             }
+
+            System.out.println(valorGasolina)
+            System.out.println(valorAlcool)
 
             if (valorGasolina != "" && valorAlcool != "") {
                 var valorGasolinaFloat = valorGasolina.replace(",", "").toFloat()
